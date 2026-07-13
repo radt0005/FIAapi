@@ -30,10 +30,9 @@ library(FIAapi)
 # Example API request
 # Replace with actual package functions
 
-result <- fia_query(
-  state = "VA",
-  variable = "BIO_ACRE"
-)
+result <- GB_api(EVAL_GRP = "512017",
+       ATTRIBUTE_NBR = 10,
+       GRP_BY_ATTRIB = c("COUNTYCD"))
 
 head(result)
 ```
